@@ -12,11 +12,8 @@ version = "1.0~ynh1"
 maintainers = ["eric_G"]
 
 [upstream]
-license = "free"
-website = "https://example.com"
-demo = "https://educajou.forge.apps.education.fr/autobd/?type_galerie=personnages&personnage=Jous"
-admindoc = "https://yunohost.org/packaging_apps"
-userdoc = "https://yunohost.org/apps"
+license = "GNU/GPL"
+demo = "https://educajou.forge.apps.education.fr/autobd"
 code = "https://forge.apps.education.fr/educajou/autobd"
 
 
@@ -39,7 +36,7 @@ ram.runtime = "50M"
 
     [install.path]
     type = "path"
-    default = "/example"
+    default = "/autobd"
 
     [install.init_main_permission]
     type = "group"
@@ -56,29 +53,8 @@ ram.runtime = "50M"
     # autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
-    # This will provision/deprovision a unix system user
 
     [resources.install_dir]
-    # This will create/remove the install dir as /var/www/$app
-    # and store the corresponding setting $install_dir
-
-    [resources.data_dir]
-    # This will create/remove the data dir as /home/yunohost.app/$app
-    # and store the corresponding setting $data_dir
 
     [resources.permissions]
-    # This will configure SSOwat permission for $domain/$path/
-    # The initial allowed group of user is configured via the init_main_permission question (public=visitors, private=all_users)
     main.url = "/"
-
-    [resources.ports]
-    # This will pick a random port for reverse-proxying and store it as the $port setting
-
-    [resources.apt]
-    # This will automatically install/uninstall the following apt packages
-    # and implicitly define the $phpversion setting as 8.0 (if phpX.Y-foobar dependencies are listed)
-    packages = "mariadb-server, deb1, deb2, php8.0-foo, php8.0-bar"
-
-    [resources.database]
-    # This will automatically provision/deprovison a MySQL DB and store the corresponding credentials in settings $db_user, $db_name, $db_pwd
-    type = "mysql"
